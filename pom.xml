@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.bat.tpd.primarydb</groupId>
+  <artifactId>tpd-commons</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>tpd-commons</name>
+  <url>http://maven.apache.org</url>
+  <description>Framework for common utilities and entity classes</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.8.5</version>
+	</dependency>
+	<dependency>
+   		<groupId>com.fasterxml.jackson.core</groupId>
+    	<artifactId>jackson-databind</artifactId>
+    	<version>2.9.6</version>
+	</dependency>
+	<dependency>
+    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>5.0.4.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.25</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>com.ibm.tpd.common.util</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+        </plugins>
+    </build>   
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>artifactory-dal10-01-node-07.swg-devops.com-releases</name>
+        <url>https://na.artifactory.swg-devops.com:443/artifactory/gbs-bat-eutpd-maven-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>artifactory-dal10-01-node-07.swg-devops.com-snapshots</name>
+        <url>https://na.artifactory.swg-devops.com:443/artifactory/gbs-bat-eutpd-maven-local</url>
+    </snapshotRepository>
+</distributionManagement>
+
+</project>
